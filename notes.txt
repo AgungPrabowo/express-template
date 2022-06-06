@@ -1,0 +1,11 @@
+db migration
+./node_modules/.bin/sequelize-cli init
+./node_modules/.bin/sequelize-cli model:generate --name user --attributes username:string,password:string --underscored
+
+./node_modules/.bin/sequelize-cli model:generate --name todo --attributes user_id:integer,description:text --underscored
+
+Migration
+./node_modules/.bin/sequelize-cli db:migrate
+
+bcrypt // for hash password
+express-validator // for validation
